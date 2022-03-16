@@ -35,13 +35,13 @@ public class libretto {
 	 * @param nome Nome dell'esame
 	 * @return punteggio numerico, oppure un'eccezione se l'esame non esiste
 	 */
-	public int puntiEsame(String nome) {
+	public Integer puntiEsame(String nome) {
 		for(voto v: this.voti) {
 			if(v.getNome().equals(nome)) {
 				return v.getPunti();
 			}
 		}
-    throw new IllegalArgumentException("Corso non trovato");
+    return null;
 	}
 	
 	public boolean isDuplicato(voto v) {
