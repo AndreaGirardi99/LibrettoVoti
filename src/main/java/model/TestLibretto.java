@@ -11,8 +11,6 @@ public class TestLibretto {
 		System.out.println(lib);
 		
 		System.out.println("Voti pari a 25:");
-		libretto lib25 = lib.filtraPunti(25);
-		System.out.println(lib25);
 	}
 	
 }

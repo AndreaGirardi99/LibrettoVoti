@@ -54,12 +54,6 @@ public class FXMLController {
     	model.add(new voto (nome, punti));
     	
     	//3. visualizzazione/aggiornamento del risultato
-    	List<voto> voti = model.getVoti();
-    	txtVoti.clear();
-    	txtVoti.appendText("Hai superato " +voti.size()+ " esami \n");
-    	for(voto v: voti) {
-    		txtVoti.appendText(v.toString() + "\n");
-    	}
     	
     	txtNome.clear();
     	cmbPunti.setValue(null);
@@ -67,6 +61,14 @@ public class FXMLController {
   
     public void setModel(libretto model) {
     	this.model = model;
+    	
+    	List<voto> voti = model.getVoti();
+    	txtVoti.clear();
+    	txtVoti.appendText("Hai superato " +voti.size()+ " esami \n");
+    	for(voto v: voti) {
+    		txtVoti.appendText(v.toString() + "\n");
+    	}
+    	
     }
     
     @FXML
